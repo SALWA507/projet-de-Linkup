@@ -8,7 +8,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts =post::with('user')
+       $posts = Post::with('user')
         ->latest()
         ->get();
         return view('feed',compact('posts'));
