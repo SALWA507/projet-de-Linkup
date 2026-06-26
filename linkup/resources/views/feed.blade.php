@@ -2,21 +2,21 @@
 
 @section('content')
 
-<h2 class="text-3xl font-bold mb-6">
-    Feed LinkUp
+<h2 class="text-3xl font-bold mb-8">
+    Fil d'actualité
 </h2>
 
 @foreach($posts as $post)
 
-<div class="bg-white rounded-lg shadow p-6 mb-6">
+<div class="bg-white rounded-xl shadow mb-6 p-6">
 
-    <div class="flex items-center gap-4">
+    <div class="flex items-center">
 
         <img
-            src="https://via.placeholder.com/60"
-            class="rounded-full">
+            src="{{ $post->user->image_url }}"
+            class="w-14 h-14 rounded-full object-cover">
 
-        <div>
+        <div class="ml-4">
 
             <h3 class="font-bold text-lg">
 
@@ -26,7 +26,13 @@
 
             <p class="text-gray-500">
 
-                Développeur Full Stack
+                {{ $post->user->headline }}
+
+            </p>
+
+            <p class="text-sm text-gray-400">
+
+                {{ $post->user->company }}
 
             </p>
 
@@ -34,7 +40,7 @@
 
     </div>
 
-    <div class="mt-4">
+    <div class="mt-6 text-gray-700">
 
         {{ $post->content }}
 
