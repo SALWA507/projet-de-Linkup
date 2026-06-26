@@ -10,7 +10,7 @@
 
 <body class="bg-gray-100">
 
-    <!-- Navbar -->
+
 
     <nav class="bg-white shadow">
 
