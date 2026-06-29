@@ -13,4 +13,3 @@ return view('auth.register');
 return view('auth.login');
     }
 }
-
